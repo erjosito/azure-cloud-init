@@ -4,4 +4,6 @@ packages:
  - wget
  - jq
 runcmd:
- - [ wget, "http://slashdot.org", -O, /tmp/index.html ]
+ - [ wget, "https://raw.githubusercontent.com/erjosito/azure-cloud-init/master/download_metadata.sh", >~/download_metadata.sh ]
+ - [ chmod, 755, ~/download_metadata.sh ]
+ - [ ~/download_metadata.sh ]
