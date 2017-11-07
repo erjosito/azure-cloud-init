@@ -1,0 +1,7 @@
+#cloud-config
+packages:
+ - curl
+ - wget
+ - jq
+runcmd:
+ - [ wget, "http://slashdot.org", -O, /tmp/index.html ]
